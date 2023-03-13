@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tu portal</title>
+		<link rel="shortcut icon" href="imagenes/logoTps.png" />
+		<link rel="stylesheet" href="style.css" />
+
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Bootstrap CSS v5.2.1 & favicon -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+		/>
+		<link rel="stylesheet" href="main.js" />
+	</head>
+
+	<body>
+		<header>
+			<!-- place navbar here -->
+			<div class="container-fluid">
+				<div class="row">
+					<div
+						class="col d-flex flex-row flex-nowrap justify-content-center my-3"
+					>
+						<h2
+							class="title d-flex align-items-center fst-italic"
+							style="color: blueviolet"
+						>
+							Tu portal de servicios
+						</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col p-0">
+						<!-- Navigation -->
+						<nav class="navbar navbar-expand-lg navbar-light bg-light">
+							<a class="navbar-brand" href="index.html"
+								><img src="imagenes/logoTps.png" alt="" class="logo"
+							/></a>
+							<button
+								class="navbar-toggler"
+								type="button"
+								data-toggle="collapse"
+								data-target="#navbarNav"
+								aria-controls="navbarNav"
+								aria-expanded="false"
+								aria-label="Toggle navigation"
+							>
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarNav">
+								<ul class="navbar-nav">
+									<li class="nav-item active">
+										<a class="nav-link" href="#"
+											>Home <span class="sr-only">(current)</span></a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Servicios</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Horarios</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
+
+						<!-- Content -->
+						<div class="container my-5">
+							<h1>Bienvenido a nuestros servicios</h1>
+							<p>Regístrate para hacer una reserva</p>
+							<form class="col-lg-8">
+								<div class="form-group">
+									<label for="inputName">Nombre</label>
+									<input
+										type="text"
+										class="form-control"
+										id="inputName"
+										placeholder="Ingresa tu nombre"
+									/>
+								</div>
+								<div class="form-group">
+									<label for="inputEmail">Correo electrónico</label>
+									<input
+										type="email"
+										class="form-control"
+										id="inputEmail"
+										placeholder="Ingresa tu correo electrónico"
+									/>
+								</div>
+								<div classclass="form-group">
+									<label for="inputPassword">Contraseña</label>
+									<input
+										type="password"
+										class="form-control"
+										id="inputPassword"
+										placeholder="Ingresa una contraseña"
+									/>
+								</div>
+								<div class="form-group">
+									<label for="inputService">Servicio</label>
+									<select class="form-control" id="inputService">
+										<option>Masaje</option>
+										<option>Peluquería</option>
+										<option>Manicura</option>
+										<option>Pedicura</option>
+										<option>Otro</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="inputDate">Fecha</label>
+									<input type="date" class="form-control" id="inputDate" />
+								</div>
+								<div class="form-group">
+									<label for="inputTime">Hora</label>
+									<input type="time" class="form-control" id="inputTime" />
+								</div>
+								<button type="submit" class="btn btn-primary">Reservar</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<!-- Modal para registro de usuarios -->
+					<div
+						class="modal fade"
+						id="modalRegistro"
+						tabindex="-1"
+						role="dialog"
+						aria-labelledby="modalRegistroLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modalRegistroLabel">
+										Registro de usuarios
+									</h5>
+									<button
+										type="button"
+										class="close"
+										data-dismiss="modal"
+										aria-label="Close"
+									>
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form id="formRegistro">
+										<div class="form-group">
+											<label for="inputNombre">Nombre</label>
+											<input
+												type="text"
+												class="form-control"
+												id="inputNombre"
+												required
+											/>
+										</div>
+										<div class="form-group">
+											<label for="inputEmail">Email</label>
+											<input
+												type="email"
+												class="form-control"
+												id="inputEmail"
+												required
+											/>
+										</div>
+										<div class="form-group">
+											<label for="inputPassword">Contraseña</label>
+											<input
+												type="password"
+												class="form-control"
+												id="inputPassword"
+												required
+											/>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-dismiss="modal"
+									>
+										Cerrar
+									</button>
+									<button
+										type="submit"
+										class="btn btn-primary"
+										form="formRegistro"
+										id="buttonRegistro"
+									>
+										Registrarse
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Modal para inicio de sesión -->
+					<div
+						class="modal fade"
+						id="modalLogin"
+						tabindex="-1"
+						role="dialog"
+						aria-labelledby="modalLoginLabel"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modalLoginLabel">
+										Inicio de sesión
+									</h5>
+									<button
+										type="button"
+										class="close"
+										data-dismiss="modal"
+										aria-label="Close"
+									>
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form id="formLogin">
+										<div class="form-group">
+											<label for="inputEmailLogin">Email</label>
+											<input
+												type="email"
+												class="form-control"
+												id="inputEmailLogin"
+												required
+											/>
+										</div>
+										<div class="form-group">
+											<label for="inputPasswordLogin">Contraseña</label>
+											<input
+												type="password"
+												class="form-control"
+												id="inputPasswordLogin"
+												required
+											/>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-dismiss="modal"
+									>
+										Cerrar
+									</button>
+									<button
+										type="submit"
+										class="btn btn-primary"
+										form="formLogin"
+										id="buttonLogin"
+									>
+										Iniciar sesión
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<!-- place footer here -->
+		</footer>
+		<!-- Bootstrap JavaScript Libraries -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+			crossorigin="anonymous"
+		></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+			integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
+
+<!-- <nav
+							class="navbar navbar-expand-lg navbar-light bg-light text-bg-light"
+						>
+							<div class="container-fluid">
+								<a href="index.html"
+									><img
+										src="imagenes/logoTps.png"
+										alt="logo"
+										class="img-fluid ms-4"
+										style="width: 60px"
+								/></a>
+								<button
+									class="navbar-toggler text-center"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#navbarSupportedContent"
+									aria-controls="navbarSupportedContent"
+									aria-expanded="false"
+									aria-label="Toggle navigation"
+								>
+									<span class="navbar-toggler-icon"></span>
+								</button>
+								<div
+									class="collapse navbar-collapse justify-content-end text-center"
+									id="navbarSupportedContent"
+								>
+									<ul class="navbar-nav mb-lg-0">
+										<li class="nav-item dropdown mx-1">
+											<a
+												class="nav-link dropdown-toggle text-uppercase"
+												href="#"
+												id="navbarDropdown"
+												role="button"
+												data-bs-toggle="dropdown"
+												aria-expanded="false"
+											>
+												servicios
+											</a>
+											<ul
+												class="dropdown-menu text-center"
+												aria-labelledby="navbarDropdown"
+											>
+												<li>
+													<a class="dropdown-item text-capitalize" href="#"
+														>limpieza</a
+													>
+												</li>
+												<li>
+													<a class="dropdown-item text-capitalize" href="#"
+														>niñera</a
+													>
+												</li>
+												<li>
+													<a class="dropdown-item text-capitalize" href="#"
+														>acompañamiento</a
+													>
+												</li>
+											</ul>
+										</li>
+										<li class="nav-item mx-1">
+											<a
+												class="nav-link btn btn-light active text-uppercase"
+												type="button"
+												href="#"
+												>registrarse</a
+											>
+										</li>
+										<li class="nav-item mx-1">
+											<a
+												class="nav-link btn btn-light active text-uppercase"
+												type="button"
+												href="#"
+												>iniciar sesion</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</nav> -->
